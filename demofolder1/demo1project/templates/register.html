@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input[type=text] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=email] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=password] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+ </style>
+</head>
+<body style="background:lightpink">
+<div align="center" >
+    <h2>Registration</h2>
+<form  method="post" action="" style="align">
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="Enter your Name"><br>
+    <input type="text" name="first_name" placeholder="Enter first name"><br>
+    <input type="text" name="last_name" placeholder="Enter last Name"><br>
+    <input type="email" name="email" placeholder="Enter your Email"><br>
+    <input type="password" name="password" placeholder="Enter password"><br>
+    <input type="password" name="password1" placeholder="reEnter password"><br>
+    <input type="submit">
+
+
+</form>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+
+</div>
+</body>
+</html>
